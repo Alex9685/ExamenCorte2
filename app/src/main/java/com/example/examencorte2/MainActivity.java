@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    public void Nuevo(View view) {
+        editTextCodigo.setText("");
+        editTextNombre.setText("");
+        setEditingEnabled(true); // Habilitar los campos de entrada al presionar "Nuevo"
+    }
 
     public void salir(View view) {
         finish();
