@@ -51,7 +51,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void limpiar(View view) {
+        editTextCodigo.setText("");
+        editTextNombre.setText("");
+        editTextMarca.setText("");
+        editTextPrecio.setText("");
+        radioGroup.clearCheck();
+    }
 
     public void Nuevo(View view) {
         editTextCodigo.setText("");
