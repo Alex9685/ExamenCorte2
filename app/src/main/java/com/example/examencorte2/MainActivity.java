@@ -50,6 +50,40 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.setEnabled(enabled);
     }
 
+    public void Guardar(View view) {
+        String codigo = editTextCodigo.getText().toString();
+        String nombre = editTextNombre.getText().toString();
+        String marca = editTextMarca.getText().toString();
+        String precio = editTextPrecio.getText().toString();
+
+        int selectedRadioButtonId = radioGroup.getCheckedRadioButtonId();
+        String tipo = "";
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            tipo = selectedRadioButton.getText().toString();
+        }
+
+        if (!codigo.isEmpty() && !nombre.isEmpty() && !marca.isEmpty() && !precio.isEmpty() && !tipo.isEmpty()) {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put(DbHelper.COLUMN_ID, codigo);
+            values.put(DbHelper.COLUMN_NOMBRE, nombre);
+            values.put(DbHelper.COLUMN_MARCA, marca);
+            values.put(DbHelper.COLUMN_PRECIO, precio);
+            values.put(DbHelper.COLUMN_TIPO, tipo);
+
+            long result = db.insertWithOnConflict(DbHelper.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+            db.close();
+
+            if (result != -1) {
+                Toast.makeText(this, "Producto guardado correctamente", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Error al guardar el producto", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Debes completar todos los campos", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void limpiar(View view) {
         editTextCodigo.setText("");
