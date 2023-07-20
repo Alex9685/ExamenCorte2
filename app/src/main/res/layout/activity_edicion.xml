@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".EdicionProductos">
+
+    <TextView
+        android:id="@+id/textViewTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Examen Corte 2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <LinearLayout
+        android:id="@+id/buscar"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitulo1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Codigo"
+            android:layout_width="150dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Codigo"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/Buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/white"
+            android:onClick="Buscar"
+            android:text="Buscar"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Producto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/buscar"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/Marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marca"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/Nombre"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/Precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/Marca"
+        android:layout_marginBottom="16dp" />
+
+
+    <RadioGroup
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Precio"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonPerecedero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perecedero"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNoPerecedero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Perecedero"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/buttons"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/kakaka2"
+        android:layout_below="@+id/ku"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/Borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:onClick="Borrar"
+            android:layout_marginLeft="12dp"
+            android:text="Borrar"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/Actualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:backgroundTint="@color/white"
+            android:onClick="Actualizar"
+            android:textSize="20dp"
+            android:text="Actualizar"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="12dp"
+            android:layout_marginLeft="130dp"
+            android:textSize="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/kakaka2"
+            android:onClick="salir"
+            android:text="Salir"
+            android:textColor="@color/black" />
+
+
+
+</RelativeLayout>

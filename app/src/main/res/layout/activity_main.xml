@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Examen Corte 2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <EditText
+        android:id="@+id/Codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Codigo"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewTitulo1"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Producto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/Codigo"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/Marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marca"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/Nombre"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/Precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/Marca"
+        android:layout_marginBottom="16dp" />
+
+
+    <RadioGroup
+    android:id="@+id/buttons"
+    android:layout_width="match_parent"
+    android:layout_below="@id/Precio"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/radioButtonPerecedero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perecedero"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/radioButtonNoPerecedero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Perecedero"
+        android:textSize="20sp" />
+
+</RadioGroup>
+
+
+    <TextView
+        android:id="@+id/ku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/buttons"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/kakaka2"
+        android:layout_below="@+id/ku"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/Guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:onClick="Guardar"
+            android:layout_marginLeft="25dp"
+            android:text="Guardar"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/Limpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="118dp"
+            android:backgroundTint="@color/white"
+            android:textSize="20dp"
+            android:onClick="limpiar"
+            android:text="limpiar"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/kakaka2"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/Nuevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:onClick="Nuevo"
+            android:layout_marginLeft="30dp"
+            android:text="Nuevo"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/Editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:backgroundTint="@color/white"
+            android:textSize="20dp"
+            android:onClick="Editar"
+            android:text="Ir Editar"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+</RelativeLayout>
