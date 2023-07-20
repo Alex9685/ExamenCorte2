@@ -1,6 +1,5 @@
 package com.example.examencorte2;
 
-
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -22,6 +21,8 @@ public class EdicionProductos extends AppCompatActivity {
     private RadioGroup radioGroup;
     private DbHelper dbHelper;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,8 @@ public class EdicionProductos extends AppCompatActivity {
         }
 
         dbHelper = new DbHelper(this);
+
+
 
     }
 
