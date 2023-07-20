@@ -51,7 +51,31 @@ public class EdicionProductos extends AppCompatActivity {
 
 
 
+    public void Borrar(View view) {
+        String codigoStr = editTextCodigo.getText().toString();
 
+        if (!codigoStr.isEmpty()) {
+            int codigo = Integer.parseInt(codigoStr);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            String selection = DbHelper.COLUMN_ID + " = ?";
+            String[] selectionArgs = {String.valueOf(codigo)};
+
+            int result = db.delete(DbHelper.TABLE_NAME, selection, selectionArgs);
+            db.close();
+
+            if (result > 0) {
+                Toast.makeText(this, "Producto borrado correctamente", Toast.LENGTH_SHORT).show();
+                editTextCodigo.setText("");
+                editTextNombre.setText("");
+                editTextMarca.setText("");
+                editTextPrecio.setText("");
+            } else {
+                Toast.makeText(this, "Error al borrar el producto", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Debes ingresar el código del producto", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void salir(View view) {
         setResult(RESULT_OK);
